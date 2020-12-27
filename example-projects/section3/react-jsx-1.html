@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React with JSX</title>
+  </head>
+  <body>
+    <h1>Hello world</h1>
+    <div id="put_react_here"></div>
+
+    <!-- 리액트, 리액트돔 CDN -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <!-- 바벨 -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      class OfficeButton extends React.Component {
+        state = { isInOffice: false };
+
+        render() {
+          var buttonPressed = this.state.isInOffice === true;
+          var unPressedButtonText = this.props.name + " 출근도장";
+          var pressedButtonText = this.props.name + " 출근했습니다";
+
+          if (buttonPressed) {
+            return pressedButtonText;
+          }
+
+          return (
+            <button onClick={() => this.setState({ isInOffice: true })}>
+              {unPressedButtonText}
+            </button>
+          );
+        }
+      }
+
+      var 리액트들어갈div = document.getElementById("put_react_here");
+      ReactDOM.render(<OfficeButton name="유림" />, 리액트들어갈div);
+    </script>
+  </body>
+</html>

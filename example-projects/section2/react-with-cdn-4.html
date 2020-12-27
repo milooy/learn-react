@@ -43,8 +43,13 @@
           return React.createElement(
             "button",
             {
-              onClick: () => this.setState({ isInOffice: true }),
-              onMouseEnter: () => console.log("마우스 올렸다"),
+              onClick: function (e) {
+                this.setState({ isInOffice: true });
+              }.bind(this),
+              // 화살표 함수
+              onMouseEnter: (e) => {
+                console.log(e, "마우스 올렸다", this.props);
+              },
             },
             this.props.name + " 출근도장"
           );

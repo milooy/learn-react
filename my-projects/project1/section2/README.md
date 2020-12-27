@@ -70,3 +70,4 @@
 - [ ] 버튼을 누르면 `isInOffice`를 `true`로 만드는 `setState`함수를 호출한다
   - state는 무조건 `setState`함수를 통해서만 업데이트할 수 있습니다.
 - [ ] render 메서드에서 `isInOffice`가 `true`면 '본인이름 출근했습니다" 텍스트 반환
+- [ ] constructor 대신 Class field 문법으로 간단하게 처음 state를 정의해보기
