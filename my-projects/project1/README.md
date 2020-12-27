@@ -8,13 +8,17 @@
 
 ## 1. 리액트 라이브러리 받아오기: CDN
 
+> 리액트 코드 직접 다운로드 대신 CDN(클라우드에 저장된 리액트 코드)으로 간단하게 실습합니다.
+
 - [ ] `react-with-cdn.html` 에 빈 HTML 껍데기 만들기(html:5 + tab으로 자동생성)
 - [ ] h1태그로 Hello world 치고 브라우저에 띄우기
 - [ ] [리액트 CDN 코드](https://ko.reactjs.org/docs/cdn-links.html) 삽입후 `console.log(React, ReactDOM)` 찍어보기
 
 ## 2. HTML에 리액트로 버튼 그리기
 
-[참고 코드](example-project/section2/react-with-cdn-1.html)
+[참고 코드](../../example-projects/section2/react-with-cdn-1.html)
+
+> 빈 HTML div에 리액트로 버튼을 그릴거예요.
 
 - [ ] 'put_react_component_here'을 id로 가진 div 생성
 - [ ] React.createElement 메서드로 '출근도장' 버튼 생성
@@ -22,7 +26,9 @@
 
 ## 3. 구멍 뚫린 버튼 블록 만들기: Component, props
 
-[참고 코드](example-project/section2/react-with-cdn-2.html)
+> 컴포넌트를 다양한 상황에서 재사용할 수 있도록 해주는 일등공신이 props입니다.
+
+[참고 코드](../../example-projects/section2/react-with-cdn-2.html)
 
 <img src="https://user-images.githubusercontent.com/3839771/103167821-d0695380-4871-11eb-9bca-ab999ecc02ab.png" width="500">
 
@@ -34,7 +40,9 @@
 
 ## 4. 버튼 누르기: 이벤트 처리
 
-[참고 코드](example-project/section2/react-with-cdn-3.html)
+> JavaScript 기본 이벤트 처리와 98% 비슷하고 2% 다른 리액트 이벤트 처리
+
+[참고 코드](../../example-projects/section2/react-with-cdn-3.html)
 
 - [ ] `put_react_here` div 아래에 일반 HTML 버튼 + 자바스크립트 핸들러 달기
 - [ ] button 엘리먼트에 onClick 이벤트 핸들러 달기 (`console.log(e)` 찍어보기)
@@ -43,7 +51,9 @@
 
 ## 버튼을 누른 상태로 만들기: State
 
-[참고 코드](example-project/section2/react-with-cdn-4.html)
+> 컴포넌트 외부에서 넘겨주는 데이터가 props였다면, 컴포넌트 내부에서 관리하는 데이터는 state입니다.
+
+[참고 코드](../../example-projects/section2/react-with-cdn-4.html)
 
 <img src="https://user-images.githubusercontent.com/3839771/103170209-dff29780-4885-11eb-9f40-0bd6c3c3ab0f.png" width="500">
 
