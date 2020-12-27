@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React with cdn</title>
+  </head>
+  <body>
+    <h1>Hello world</h1>
+    <!-- 리액트로 그린 UI가 들어갈 빈 div -->
+    <div id="put_react_here"></div>
+
+    <!-- 리액트, 리액트돔 CDN -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+
+    <!-- 리액트로 짤 JavaScript 코드 -->
+    <script>
+      console.log("리액트 코드", React, ReactDOM);
+
+      // 첫 번째 컴포넌트!
+      class OfficeButton extends React.Component {
+        constructor(props) {
+          super(props); // 상속받은(이 코드의 경우 React.Component) constructor 한 번 실행
+          console.log(props);
+          console.log(this); // this는 OfficeButton입니다.
+          this.state = { isInOffice: false }; // OfficeButton.state에 초기 state 정의
+        }
+        // constructor 대신 Class field 문법으로 간단하게 처음 state를 정의할 수도 있습니다
+        // state = { isInOffice: false };
+
+        render() {
+          if (this.state.isInOffice) {
+            return this.props.name + " 출근했습니다";
+          }
+
+          return React.createElement(
+            "button",
+            {
+              onClick: () => this.setState({ isInOffice: true }),
+              onMouseEnter: () => console.log("마우스 올렸다"),
+            },
+            this.props.name + " 출근도장"
+          );
+        }
+      }
+
+      var 리액트들어갈div = document.getElementById("put_react_here");
+      var 출근도장리액트엘리먼트 = React.createElement(OfficeButton, {
+        name: "유림",
+      });
+      ReactDOM.render(출근도장리액트엘리먼트, 리액트들어갈div);
+    </script>
+  </body>
+</html>

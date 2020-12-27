@@ -58,7 +58,7 @@
   }); // 댓글버튼 누르면 댓글 전송
   ```
 
-  - JavaScript로 UI (HTML 코드)를 생성하기 위해 예측하기 힘든 코드를 작성해야 한다.
+  - JavaScript로 UI (HTML 코드)를 생성하기 위해 예측하기 힘든 코드를 작성해야 합니다.
 
 - 리액트를 사용하여 댓글 개발
   HTML (동일)
@@ -72,14 +72,16 @@
   JavaScript(React)
 
   ```JSX
-  function comment() {
+  function Comment() {
     return (
       <div onClick={() => alert('댓글 전송')}>
-        <span id="comment_username">
+        <span id="comment_username" />
         <button />
       </div>
     )
   }
   ```
 
-  - HTML처럼 보이는 JavaScript 코드 작성 가능. 직관적으로 UI를 상상할 수 있다.
+  - HTML처럼 보이는 JavaScript 코드 작성 가능. 직관적으로 UI를 상상할 수 있습니다.
+  - 공식 사이트의 소개: '사용자 인터페이스(User Interface - UI)를 만들기 위한 JavaScript 라이브러리'
+    <img src="https://user-images.githubusercontent.com/3839771/103163437-3689b280-4841-11eb-8c71-c5528967403d.png">
