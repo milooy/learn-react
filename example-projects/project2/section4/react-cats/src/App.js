@@ -2,20 +2,23 @@ import "./App.css";
 import ListRow from "./components/ListRow";
 import MainCard from "./components/MainCard";
 import { formatCatId } from "./utils";
-
-const cat1ImgSrc =
-  "https://user-images.githubusercontent.com/3839771/103185428-c4c46e00-48ff-11eb-8b1f-2d1cda61f383.jpg";
-const cat2ImgSrc =
-  "https://user-images.githubusercontent.com/3839771/103185434-c726c800-48ff-11eb-8312-38cd1bf3d707.jpeg";
+import catsData from "./catsData";
 
 function App() {
   return (
     <div className="App">
       <h1>Cats</h1>
-      <MainCard id={formatCatId("1aa")} imgSrc={cat1ImgSrc} />
+      <MainCard id={formatCatId(catsData[0].id)} imgSrc={catsData[0].imgSrc} />
       <ul>
-        <ListRow id={formatCatId("1aa")} imgSrc={cat1ImgSrc} />
-        <ListRow id={formatCatId("2bb")} imgSrc={cat2ImgSrc} />
+        {catsData.map(function (cat) {
+          return (
+            <ListRow
+              key={cat.id}
+              id={formatCatId(cat.id)}
+              imgSrc={cat.imgSrc}
+            />
+          );
+        })}
       </ul>
     </div>
   );
