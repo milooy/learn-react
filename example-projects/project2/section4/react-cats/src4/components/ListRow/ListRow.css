@@ -1,0 +1,15 @@
+.list-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  padding: 5px;
+  margin-bottom: 12px;
+}
+.list-row > img {
+  height: 70px;
+}
+.list-row__right {
+  display: flex;
+  align-items: center;
+}
