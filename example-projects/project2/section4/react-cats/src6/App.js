@@ -4,7 +4,7 @@ import ListRow from "./components/ListRow";
 import MainCard from "./components/MainCard";
 import Clock from "./components/Clock";
 import { formatCatId } from "./utils";
-import VisitorForm from "./components/VisitorForm";
+// import catsData from "./catsData";
 
 async function getCats() {
   return await fetch(
@@ -13,6 +13,7 @@ async function getCats() {
     .then((res) => res)
     .then((res) => res.json());
 }
+
 class App extends React.Component {
   state = { cats: [], selectedCatIndex: 0, showClock: true };
 
@@ -65,7 +66,6 @@ class App extends React.Component {
             );
           })}
         </ul>
-        <VisitorForm />
       </div>
     );
   }

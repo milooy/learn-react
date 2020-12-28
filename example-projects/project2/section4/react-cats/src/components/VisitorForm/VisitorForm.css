@@ -1,0 +1,10 @@
+.visitor-form {
+  display: flex;
+  flex-direction: column;
+}
+.visitor-form label {
+  margin: 10px 0 5px;
+}
+.visitor-form button {
+  margin: 10px 0 20px;
+}
