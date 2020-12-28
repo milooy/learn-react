@@ -6,6 +6,9 @@
   padding: 5px;
   margin-bottom: 12px;
 }
+.list-row--pressed {
+  background: yellow;
+}
 .list-row > img {
   height: 70px;
 }
