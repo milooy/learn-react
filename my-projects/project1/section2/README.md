@@ -11,7 +11,7 @@
 > 리액트 코드 직접 다운로드 대신 CDN(클라우드에 저장된 리액트 코드)으로 간단하게 실습합니다.
 
 - [ ] `react-with-cdn.html` 에 빈 HTML 껍데기 만들기(html:5 + tab으로 자동생성)
-- [ ] h1태그로 Hello world 치고 브라우저에 띄우기
+- [ ] h1태그로 Hello world 치고 브라우저에 띄우기 ([크롬](https://www.google.com/chrome/)을 사용해주세요!)
 - [ ] [리액트 CDN 코드](https://ko.reactjs.org/docs/cdn-links.html) 삽입후 `console.log(React, ReactDOM)` 찍어보기
 
 ## 2. HTML에 리액트로 버튼 그리기
