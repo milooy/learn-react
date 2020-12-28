@@ -8,15 +8,11 @@ function App() {
   return (
     <div className="App">
       <h1>Cats</h1>
-      <MainCard id={formatCatId(catsData[0].id)} imgSrc={catsData[0].imgSrc} />
+      <MainCard id={formatCatId(catsData[0].id)} url={catsData[0].url} />
       <ul>
         {catsData.map(function (cat) {
           return (
-            <ListRow
-              key={cat.id}
-              id={formatCatId(cat.id)}
-              imgSrc={cat.imgSrc}
-            />
+            <ListRow key={cat.id} id={formatCatId(cat.id)} url={cat.url} />
           );
         })}
       </ul>

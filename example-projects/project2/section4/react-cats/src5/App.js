@@ -20,7 +20,7 @@ class App extends React.Component {
         <h1>Cats</h1>
         <MainCard
           id={formatCatId(catsData[selectedCatIndex].id)}
-          imgSrc={catsData[selectedCatIndex].imgSrc}
+          url={catsData[selectedCatIndex].url}
         />
         <ul>
           {catsData.map((cat, index) => {
@@ -28,7 +28,7 @@ class App extends React.Component {
               <ListRow
                 key={cat.id}
                 id={formatCatId(cat.id)}
-                imgSrc={cat.imgSrc}
+                url={cat.url}
                 isSelected={selectedCatIndex === index}
                 onClick={() => this.handleClickCard(index)}
               />

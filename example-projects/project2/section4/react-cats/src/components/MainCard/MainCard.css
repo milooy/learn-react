@@ -1,0 +1,13 @@
+.main-card {
+  margin-bottom: 12px;
+  padding: 5% 10%;
+}
+.main-card > img {
+  width: 100%;
+  border: 2px solid black;
+}
+.main-card__bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+}
