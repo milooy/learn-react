@@ -9,7 +9,6 @@ export default class MainCard extends React.Component {
         <img src={imgSrc} alt="대표 고양이" />
         <div className="main-card__bottom">
           <span>{id}</span>
-          <button>🤍</button>
         </div>
       </div>
     );
