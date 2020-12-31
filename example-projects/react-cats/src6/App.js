@@ -48,7 +48,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Cats</h1>
-        {showClock && <Clock onClick={this.hideClock} />}
+        {showClock && <Clock onClick={this.hideClock.bind(this)} />}
         <MainCard
           id={formatCatId(cats[selectedCatIndex].id)}
           url={cats[selectedCatIndex].url}
