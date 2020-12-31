@@ -5,14 +5,8 @@ import MainCard from "./components/MainCard";
 import Clock from "./components/Clock";
 import { formatCatId } from "./utils";
 import VisitorForm from "./components/VisitorForm";
+import { getCats } from "./remotes/cats";
 
-async function getCats() {
-  return await fetch(
-    "https://api.thecatapi.com/v1/images/search?limit=5&page=0"
-  )
-    .then((res) => res.json())
-    .then((data) => data);
-}
 class App extends React.Component {
   state = { cats: [], selectedCatIndex: 0, showClock: true };
 
@@ -39,6 +33,7 @@ class App extends React.Component {
 
   render() {
     const { selectedCatIndex, showClock, cats } = this.state;
+    const selectedCat = cats[selectedCatIndex];
 
     if (cats.length === 0) {
       return <div>로딩중</div>;
@@ -48,10 +43,7 @@ class App extends React.Component {
       <div className="App">
         <h1>Cats</h1>
         {showClock && <Clock onClick={this.hideClock.bind(this)} />}
-        <MainCard
-          id={formatCatId(cats[selectedCatIndex].id)}
-          url={cats[selectedCatIndex].url}
-        />
+        <MainCard id={formatCatId(selectedCat.id)} url={selectedCat.url} />
         <ul>
           {cats.map((cat, index) => {
             return (
