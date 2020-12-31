@@ -76,9 +76,12 @@ class Story extends React.component {
 
 - 리액트 생태계엔 다른 멋진 개발자들이 만들어놓은 기성품 블록들이 많습니다
 - 우리 웹사이트에 셀렉트 UI를 만들어야 할 때
+
   - 물론 직접 만들 수도 있지만
   - 기성품 블록 (외부 라이브러리)를 가져다 쓸 수 있어요
-    <img src="https://user-images.githubusercontent.com/3839771/103163614-6b970480-4843-11eb-8f40-4d95cd7a3ac4.png">
+
+    <img src="https://user-images.githubusercontent.com/3839771/103163614-6b970480-4843-11eb-8f40-4d95cd7a3ac4.png" width="500">
+
     https://react-select.com/home
 
 > 외부에서 가져온 컴포넌트에 내 데이터 넘기기

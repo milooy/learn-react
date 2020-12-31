@@ -11,7 +11,7 @@
   - 참고할 코드와 유용한 라이브러리가 많다
   - GitHub(개발자들이 코드 올리는 사이트) 리액트 관련 코드 저장소 178만개(20년 12월 기준) (Angular 71만, Vue 4.9만)
 
-    <img src="https://user-images.githubusercontent.com/3839771/103163872-0e9d4d80-4847-11eb-96c4-3ec3365a1298.png" width="70%">
+    <img src="https://user-images.githubusercontent.com/3839771/103163872-0e9d4d80-4847-11eb-96c4-3ec3365a1298.png" width="500">
 
 ## 2. 배워두면 다양한 곳에서 쓸 수 있어요
 
