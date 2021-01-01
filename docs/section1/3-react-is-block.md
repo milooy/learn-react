@@ -28,10 +28,20 @@ var 멍멍사진 = "https://img/2";
 
 return (
   <div>
-    <Story img={고양사진} onClick={() => 스토리이동(고양id)}>
+    <Story
+      img={고양사진}
+      onClick={function () {
+        스토리이동(고양id);
+      }}
+    >
       박고양
     </Story>
-    <Story img={멍멍사진} onClick={() => 스토리이동(멍멍id)}>
+    <Story
+      img={멍멍사진}
+      onClick={function () {
+        스토리이동(멍멍id);
+      }}
+    >
       김멍멍
     </Story>
   </div>
@@ -99,5 +109,3 @@ import Select from 'react-select'; // 외부 라이브러리 가져오기
 ```
 
 - 대부분 무료이며(오픈소스) 매우 많습니다(큰 생태계)
-
-([import~from 문법 참고](https://ko.javascript.info/import-export))

@@ -6,41 +6,41 @@
 
 <img src="https://user-images.githubusercontent.com/3839771/103170200-d36e3f00-4885-11eb-9901-cd426ed5a06e.png" width="500">
 
-## 1. 리액트 라이브러리 받아오기: CDN
+## 1. 리액트 라이브러리 사용하기: CDN
 
-> 리액트 코드 직접 다운로드 대신 CDN(클라우드에 저장된 리액트 코드)으로 간단하게 실습합니다.
+> 리액트로 Hello world를 코딩합니다. 리액트 라이브러리는 CDN(클라우드에 저장된 코드)으로 간단하게 가져올 거예요.
 
-- [ ] `react-with-cdn.html` 에 빈 HTML 껍데기 만들기(html:5 + tab으로 자동생성)
-- [ ] h1태그로 Hello world 치고 브라우저에 띄우기 ([크롬](https://www.google.com/chrome/)을 사용해주세요!)
-- [ ] [리액트 CDN 코드](https://ko.reactjs.org/docs/cdn-links.html) 삽입후 `console.log(React, ReactDOM)` 찍어보기
+- [ ] `react-with-cdn.html` 에 "hello world" h1태그 추가 및 크롬 브라우저에서 열기
+- [ ] 리액트 코드 삽입 ([CDN](https://ko.reactjs.org/docs/cdn-links.html) 사용)
+- [ ] 리액트가 잘 삽입되었는지 확인 (`console.log(React, ReactDOM)` 찍어보기)
 
-## 2. HTML에 리액트로 버튼 그리기
+## 2. 리액트로 만든 버튼 HTML에 넣기
+
+> 빈 HTML에 리액트로 버튼을 넣을거예요.
 
 [참고 코드](../../example-projects/first-project/section2/react-with-cdn-1.html)
 
-> 빈 HTML div에 리액트로 버튼을 그릴거예요.
+- [ ] 빈 div 생성 (id는 'put_react_component_here')
+- [ ] 출근도장 버튼 엘리먼트 생성 (`React.createElement`)
+- [ ] 출근도장 버튼 put_react_component_here div에 넣기(`ReactDOM.render`)
 
-- [ ] 'put_react_component_here'을 id로 가진 div 생성
-- [ ] React.createElement 메서드로 '출근도장' 버튼 생성
-- [ ] ReactDOM.render로 출근도장 버튼을 put_react_component_here div에 그린다
+## 3. 버튼 컴포넌트 만들기: Component, props
 
-## 3. 구멍 뚫린 버튼 블록 만들기: Component, props
-
-> 컴포넌트를 다양한 상황에서 재사용할 수 있도록 해주는 일등공신이 props입니다.
+> 컴포넌트를 다양한 상황에서 재사용할 수 있도록 해주는 일등공신인 props!
 
 [참고 코드](../../example-projects/first-project/section2/react-with-cdn-2.html)
 
 <img src="https://user-images.githubusercontent.com/3839771/103167821-d0695380-4871-11eb-9bca-ab999ecc02ab.png" width="500">
 
-- [ ] React.Component 를 상속받은 `OfficeButton` 클래스(클래스 컴포넌트) 생성
-- [ ] render 메서드에서 '출근도장'(React.createElement로 생성했던)버튼 리턴
-- [ ] OfficeButton 컴포넌트를 put_react_component_here div에 그린다
-- [ ] `{name: '내이름'}` props를 createElement 두 번째 인자에 넘기기
-- [ ] 출근 도장 텍스트 앞에 name prop 보여주기(`this.props.name` - 여기서 this는 OfficeButton)
+- [ ] `OfficeButton` 클래스 컴포넌트 생성 (`React.Component` 상속)
+- [ ] `render` 메서드에 아까 만들었던 출근도장 버튼 엘리먼트 리턴
+- [ ] `put_react_component_here` div에 `OfficeButton` 컴포넌트 넣기
+- [ ] `createElement` 함수 두 번째 인자에 내 이름 데이터 넘기기(`{name: "유림"}`)
+- [ ] 내 이름 출근도장 버튼에 보여주기 (`this.props.name + " 출근도장"`)
 
 ## 4. 버튼 누르기: 이벤트 처리
 
-> JavaScript 기본 이벤트 처리와 98% 비슷하고 2% 다른 리액트 이벤트 처리
+> JavaScript 기본 이벤트 처리와 99% 동일해요!
 
 [참고 코드](../../example-projects/first-project/section2/react-with-cdn-3.html)
 
@@ -49,7 +49,7 @@
 - [ ] 일반 자바스크립트 이벤트핸들러랑 다른 점 살펴보기
 - [ ] button 엘리먼트에 onMouseEnter 이벤트 핸들러 달기 (화살표 함수로)
 
-## 버튼을 누른 상태로 만들기: State
+## 5. 버튼을 누른 상태로 만들기: State
 
 > 컴포넌트 외부에서 넘겨주는 데이터가 props였다면, 컴포넌트 내부에서 관리하는 데이터는 state입니다.
 
