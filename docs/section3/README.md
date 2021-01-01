@@ -18,7 +18,7 @@ React.createElement(
 
 이는 기본 JavaScript 문법에 어긋남이 없다는 장점이 있지만, HTML태그로 그려질거란 상상이 잘 가지 않고 읽기 힘들다는 단점이 있습니다.
 
-그래서 리액트 팀은 JavaScript에 HTML처럼 생긴 코드를 넣는 **혼종 문법**을 만들었습니다. 이를 `JSX`라고 하죠(JavaScript XML의 약자).
+그래서 리액트 팀은 JavaScript에 HTML처럼 생긴 코드를 넣는 **특별 문법**을 만들었습니다. 이를 `JSX`라고 하죠(JavaScript XML의 약자).
 
 ```JSX
 var element = <button onClick={() => {}}>{this.props.name + " 출근도장"}</button>
@@ -28,7 +28,7 @@ var element = <button onClick={() => {}}>{this.props.name + " 출근도장"}</bu
   - html 태그를 변수에 넣었다(!)
   - html 태그 내부에 `{}`로 감싸 자바스크립트 표현식을 쓸 수 있다(!)
 - JSX의 내부구조: 실제 HTML DOM이 아닌 일반 JavaScript 오브젝트 = DOM보다 훨씬 가볍다! = 리액트 성능의 비법
-- 혼종문법 JSX를 쓰기 위해선 바벨(Babel)이라는 코드 변환기가 필요. 바벨이 JSX를 브라우저가 이해가능한 JavaScript로 바꿔줍니다.
+- 특별문법 JSX를 쓰기 위해선 바벨(Babel)이라는 코드 변환기가 필요. 바벨이 JSX를 브라우저가 이해가능한 JavaScript로 바꿔줍니다.
 - [ ] `react-with-cdn.html` 내용 전체 복사해서 `react-jsx.html`로 붙여넣기
 - [ ] 바벨 CDN 추가 (`<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>`)
 - [ ] 리액트 코드가 있는 script 태그 안에 `type="text/babel"` 추가
