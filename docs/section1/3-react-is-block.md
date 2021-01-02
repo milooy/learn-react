@@ -4,13 +4,11 @@
 
 커다란 웹사이트
 
-<img src="https://user-images.githubusercontent.com/3839771/103257121-42a57980-49d3-11eb-9256-b944f36d5257.png" width="700">
+<img src="https://user-images.githubusercontent.com/3839771/103257121-42a57980-49d3-11eb-9256-b944f36d5257.png" width="600">
 
 작은 블록
 
 <img src="https://user-images.githubusercontent.com/3839771/103408391-a7b0c900-4ba5-11eb-8a7d-03a6ab8951af.png" width="300">
-
-앞에서 봤던 '댓글' 리액트 코드
 
 ## 블록에 데이터 넘기기
 
@@ -25,27 +23,24 @@ html 태그에 데이터를 담으면
 ```jsx
 var 고양사진 = "https://img/1";
 var 멍멍사진 = "https://img/2";
-
-return (
-  <div>
-    <Story
-      img={고양사진}
-      onClick={function () {
-        스토리이동(고양id);
-      }}
-    >
-      박고양
-    </Story>
-    <Story
-      img={멍멍사진}
-      onClick={function () {
-        스토리이동(멍멍id);
-      }}
-    >
-      김멍멍
-    </Story>
-  </div>
-);
+function 고양스토리이동() {
+  스토리이동(고양id);
+}
+function 멍멍스토리이동() {
+  스토리이동(고양id);
+}
+function Stories() {
+  return (
+    <div>
+      <Story img={고양사진} onClick={고양스토리이동}>
+        박고양
+      </Story>
+      <Story img={멍멍사진} onClick={멍멍스토리이동}>
+        김멍멍
+      </Story>
+    </div>
+  );
+}
 ```
 
 props란 객체에 데이터가 담겨옵니다

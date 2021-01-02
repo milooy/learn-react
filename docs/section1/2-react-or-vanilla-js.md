@@ -4,19 +4,19 @@
 
 이 문법이 UI를 그려내는데 일반 자바스크립트보다 얼마나 특화되어있는지 간단히 코드를 보겠습니다. 코드 이해보다는 두 문법의 차이에 집중해주세요 :)
 
-> 자바스크립트로 만들고 싶은 목표 HTML
+#### 자바스크립트로 만들고 싶은 목표 HTML
 
 ```html
 <h1>댓글 작성</h1>
 <div class="comment">
   댓글내용
-  <button onclick="clickLike(id)">좋아요</button>
+  <button onclick="clickLike()">좋아요</button>
 </div>
 ```
 
 ## 리액트 없이 일반 자바스크립트로 댓글 UI 만들기
 
-> HTML
+#### HTML
 
 ```html
 <h1>댓글 작성</h1>
@@ -24,7 +24,7 @@
 <div id="comment"></div>
 ```
 
-> 자바스크립트
+#### 자바스크립트
 
 ```js
 var commentTarget = document.getElementById("comment"); // HTML에 댓글을 박아넣을 빈 공간 찾기
@@ -38,11 +38,11 @@ makeDiv.appendChild(makeButton); // 댓글 상자에 좋아요 버튼 넣기
 makeBtn.addEventListner("click", clickLike(id)); // 좋아요 버튼 클릭
 ```
 
-코드가 어떻게 UI(HTML)이 될지 예측하기 힘듦
+코드가 어떻게 UI(HTML)이 될지 예측하기 힘들다
 
 ## 리액트로 댓글 UI 만들기
 
-> HTML
+#### HTML
 
 ```html
 <h1>댓글 작성</h1>
@@ -50,20 +50,14 @@ makeBtn.addEventListner("click", clickLike(id)); // 좋아요 버튼 클릭
 <div id="comment"></div>
 ```
 
-> 리액트(JSX 문법 사용)
+#### 리액트(JSX 문법 사용)
 
 ```jsx
 function Comment(props) {
   return (
     <div>
       {props.댓글내용}
-      <button
-        onClick={function () {
-          clickLike(id);
-        }}
-      >
-        좋아요
-      </button>
+      <button onClick={clickLike}>좋아요</button>
     </div>
   );
 }
