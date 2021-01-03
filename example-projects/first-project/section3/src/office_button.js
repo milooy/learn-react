@@ -1,8 +1,8 @@
 class OfficeButton extends React.Component {
-  state = { isInOffice: false };
+  state = { isPressed: false };
 
   render() {
-    var buttonPressed = this.state.isInOffice === true;
+    var buttonPressed = this.state.isPressed === true;
     var unPressedButtonText = this.props.name + " 출근도장";
     var pressedButtonText = this.props.name + " 출근했습니다";
 
@@ -11,7 +11,7 @@ class OfficeButton extends React.Component {
     }
 
     return (
-      <button onClick={() => this.setState({ isInOffice: true })}>
+      <button onClick={() => this.setState({ isPressed: true })}>
         {unPressedButtonText}
       </button>
     );

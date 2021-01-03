@@ -32,10 +32,10 @@ var commentTarget = document.getElementById("comment"); // HTML에 댓글을 박
 var makeContainer = document.createElement("div"); // 댓글 상자 div 태그 생성
 var makeButton = document.createElement("button"); // 좋아요 버튼 생성
 
-comment.appendChild(makeContainer); // 빈 공간에 댓글 상자 넣기
-makeDiv.appendChild(makeButton); // 댓글 상자에 좋아요 버튼 넣기
+commentTarget.appendChild(makeContainer); // 빈 공간에 댓글 상자 넣기
+makeContainer.appendChild(makeButton); // 댓글 상자에 좋아요 버튼 넣기
 
-makeBtn.addEventListner("click", clickLike(id)); // 좋아요 버튼 클릭
+makeButton.addEventListner("click", clickLike(id)); // 좋아요 버튼 클릭
 ```
 
 코드가 어떻게 UI(HTML)이 될지 예측하기 힘들다

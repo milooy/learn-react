@@ -30,13 +30,13 @@
           super(props); // 상속받은(이 코드의 경우 React.Component) constructor 한 번 실행
           console.log(props);
           console.log(this); // this는 OfficeButton입니다.
-          this.state = { isInOffice: false }; // OfficeButton.state에 초기 state 정의
+          this.state = { isPressed: false }; // OfficeButton.state에 초기 state 정의
         }
         // constructor 대신 Class field 문법으로 간단하게 처음 state를 정의할 수도 있습니다
-        // state = { isInOffice: false };
+        // state = { isPressed: false };
 
         render() {
-          if (this.state.isInOffice) {
+          if (this.state.isPressed) {
             return this.props.name + " 출근했습니다";
           }
 
@@ -44,7 +44,7 @@
             "button",
             {
               onClick: function (e) {
-                this.setState({ isInOffice: true });
+                this.setState({ isPressed: true });
               }.bind(this),
               // 화살표 함수
               onMouseEnter: (e) => {

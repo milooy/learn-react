@@ -6,7 +6,10 @@
 
 <img src="https://user-images.githubusercontent.com/3839771/103170200-d36e3f00-4885-11eb-9901-cd426ed5a06e.png" width="500">
 
-## 1. 리액트 라이브러리 사용하기: CDN
+리액트 라이브러리 + 순수 자바스크립트로 코딩!
+(JSX는 다음 섹션부터 ㅎㅎ )
+
+## 1. 내 프로젝트에 리액트 넣기 (CDN 사용)
 
 > 리액트로 Hello world 코딩 - 리액트 라이브러리는 CDN(클라우드에 저장된 코드) 사용
 
@@ -14,7 +17,7 @@
 - [ ] 리액트 코드 삽입 ([CDN](https://ko.reactjs.org/docs/cdn-links.html) 사용)
 - [ ] 리액트가 잘 삽입되었는지 확인 (`console.log(React, ReactDOM)` 찍어보기)
 
-## 2. 리액트로 만든 버튼 HTML에 넣기
+## 2. 리액트로 버튼 그리기
 
 > 빈 HTML에 리액트로 버튼 넣기
 
@@ -47,7 +50,7 @@
 - [ ] `put_react_here` div 아래에 일반 HTML 버튼 + 자바스크립트 핸들러 달기
 - [ ] button 엘리먼트에 onClick 이벤트 핸들러 달기 (`console.log(e)` 찍어보기)
 - [ ] 일반 자바스크립트 이벤트핸들러랑 다른 점 살펴보기
-- [ ] button 엘리먼트에 onMouseEnter 이벤트 핸들러 달기 (화살표 함수로)
+- [ ] button 엘리먼트에 onMouseEnter 이벤트 핸들러 달기
 
 ## 5. 버튼을 누른 상태로 만들기: State
 
@@ -57,15 +60,15 @@
 
 <img src="https://user-images.githubusercontent.com/3839771/103170209-dff29780-4885-11eb-9f40-0bd6c3c3ab0f.png" width="500">
 
-- State: 컴포넌트 내부에서 **움직이는** 값
+- State: 컴포넌트 내부에서 **이리 변했다, 저리 변했다 하는** 값
 
   - e.g. 버튼이 눌려져있냐, 안 눌려져있냐
-  - e.g. 이름 입력 input에서 사용자가 입력하는 이름 값
+  - e.g. 사용자가 입력중인 댓글 값
   - e.g. 쇼핑몰 리스트 정렬 기준 - 가격순, 할인순
 
 - [ ] constructor 메서드 생성
-- [ ] 기본 state 정의 (`isInOffice: false`)
-- [ ] console.log로 확인 - `props`, `this`
-- [ ] 버튼 클릭하면 `isInOffice`를 `true`로 만든다 (`setState` 사용)
-- [ ] render 메서드에서 `isInOffice`가 `true`면 '본인이름 출근했습니다" 텍스트 반환
+- [ ] 기본 state 정의 (`isPressed: false`)
+- [ ] console.log로 확인 - `this.state`
+- [ ] 버튼 클릭하면 `isPressed`를 `true`로 만든다 (`setState` 사용)
+- [ ] render 메서드에서 `isPressed`가 `true`면 '본인이름 출근했습니다" 텍스트 반환
 - [ ] constructor 대신 Class field 문법으로 간단하게 처음 state를 정의해보기
