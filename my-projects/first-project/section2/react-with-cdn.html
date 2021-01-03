@@ -22,8 +22,17 @@
       console.log(React, ReactDOM);
       var 리액트구멍 = document.getElementById("put_react_app_here");
 
-      // document.createElement('button');
-      var 출근버튼 = React.createElement("button", {}, "출근도장");
+      class OfficeButton extends React.Component {
+        render() {
+          console.log(this.props.name);
+          return React.createElement(
+            "button",
+            {},
+            this.props.name + " 출근도장"
+          );
+        }
+      }
+      var 출근버튼 = React.createElement(OfficeButton, { name: "유림" });
 
       ReactDOM.render(출근버튼, 리액트구멍);
     </script>
