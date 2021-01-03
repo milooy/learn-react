@@ -29,17 +29,27 @@
       var 리액트구멍 = document.getElementById("put_react_app_here");
 
       class OfficeButton extends React.Component {
+        constructor(props) {
+          super(props);
+
+          this.state = {
+            isPressed: false,
+          };
+        }
+
         render() {
-          console.log(this.props.name);
+          console.log(this.state);
+
+          if (this.state.isPressed === true) {
+            return "출근했습니다!";
+          }
+
           return React.createElement(
             "button",
             {
               onClick: function (e) {
-                console.log(e, "리액트 이벤트");
-              },
-              onMouseEnter: function (e) {
-                console.log(e, "마우스엔터");
-              },
+                this.setState({ isPressed: true });
+              }.bind(this),
             },
             this.props.name + " 출근도장"
           );
