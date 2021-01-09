@@ -6,8 +6,8 @@
 
 - [ ] isLiked state 추가. 초기값은 false
 - [ ] 하트 버튼에 onClick 이벤트 달기
-- [ ] 클릭이벤트 함수 내부에서 올바른 this를 사용하기 위해 bind(this)를 해준다.
-- [ ] 클릭이벤트가 불리면 isLiked를 true로 변경한다.
+- [ ] 클릭이벤트 함수 내부에서 올바른 this를 사용하기 위해 bind(this) 달아주기
+- [ ] 클릭이벤트가 불리면 isLiked를 true로 변경
 - [ ] setState 내부를 함수형태로 리팩토링
 - [ ] bind를 constructor 로 옮기기 (성능개선)
 - [ ] 메서드를 화살표함수로 바꾸고 bind(this) 없애보기

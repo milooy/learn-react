@@ -60,7 +60,7 @@ const 이름리스트엘리먼트 = 이름리스트.map(function(이름) {
 
 ## Todo
 
-- [ ] `my-projects` 폴더의 `catsData.js` 데이터를 가져온다
-- [ ] 데이터에서 map을 사용해 ListRow 컴포넌트를 5개 그려준다
-- [ ] map에서 넘겨준 ListRow컴포넌트에 key를 추가한다
+- [ ] `my-projects` 폴더의 `catsData.js` 데이터 가져오기
+- [ ] 데이터에서 map을 사용해 ListRow 컴포넌트를 5개 그려주기
+- [ ] map에서 넘겨준 ListRow컴포넌트에 key를 추가하기
   - key란? 배열 내에서 고유한 값을 key로 넘겨줍니다. 리액트 내부적으로 성능 향상을 위한 값입니다. 고유한 값이 정 없다면 map의 index값을 넘겨줍니다.
